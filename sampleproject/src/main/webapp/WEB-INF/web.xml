@@ -13,6 +13,18 @@
     <servlet-name>morning</servlet-name>
     <servlet-class>sampleproject.GoodMorning</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>toppage</servlet-name>
+    <servlet-class>sampleproject.Top</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>introduction</servlet-name>
+    <servlet-class>sampleproject.Introduction</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>contact</servlet-name>
+    <servlet-class>sampleproject.Contact</servlet-class>
+  </servlet>
 
   <servlet-mapping>
     <servlet-name>
@@ -28,6 +40,30 @@
     </servlet-name>
     <url-pattern>
       /servlet/morning
+    </url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>
+      toppage
+    </servlet-name>
+    <url-pattern>
+      /servlet/toppage
+    </url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>
+      introduction
+    </servlet-name>
+    <url-pattern>
+      /servlet/introduction
+    </url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>
+      contact
+    </servlet-name>
+    <url-pattern>
+      /servlet/contact
     </url-pattern>
   </servlet-mapping>
 
