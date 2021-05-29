@@ -15,10 +15,10 @@
 
     <nav>
       <ul class="nav_top">
-        <li><a href="top.html" class="top_nav">トップ</a></li>
+        <li><a href="${pageContext.request.contextPath}/servlet/toppage" class="top_nav">トップ</a></li>
         <li><a href="" class="top_nav">ナビ2</a></li>
         <li><a href="" class="top_nav">ナビ3</a></li>
-        <li><a href="introduction.html" class="top_nav">自己紹介</a></li>
+        <li><a href="${pageContext.request.contextPath}/servlet/introduction" class="top_nav">自己紹介</a></li>
         <li><a href="#" class="top_nav">お問い合わせ</a></li>
       </ul>
     </nav>

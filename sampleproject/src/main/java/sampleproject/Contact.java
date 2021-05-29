@@ -13,7 +13,7 @@ private static final long serialVersionUID = 1L;
   public void doGet(HttpServletRequest request, HttpServletResponse response)
   throws IOException, ServletException
   {
-	String view = "/contact.jsp";
+	String view = "/WEB-INF/view/contact.jsp";
 	RequestDispatcher dispatcher = request.getRequestDispatcher(view);	
 	dispatcher.forward(request, response);
   }
