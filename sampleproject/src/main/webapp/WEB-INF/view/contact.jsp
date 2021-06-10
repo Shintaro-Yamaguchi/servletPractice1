@@ -23,17 +23,17 @@
       </ul>
     </nav>
 
-    <form name="contact-form" class="contact-form">
+    <form name="contact-form" method="post" action="contact" class="contact-form">
       <dl>
         <dt>名前</dt>
-        <dd><input type="text"></dd>
+        <dd><input type="text" name="username"></dd>
         <dt>性別</dt>
         <dd>
-	        <input type="radio" name="gender">男性
-	        <input type="radio" name="gender">女性
+	        <input type="radio" name="gender" value="0">男性
+	        <input type="radio" name="gender" value="1">女性
         </dd>
         <dt>問合内容</dt>
-        <dd><textarea name="nessage" class="message"></textarea></dd>
+        <dd><textarea name="message" class="message"></textarea></dd>
         <dt>添付ファイル</dt>
         <dd><input type="file" name="file" class="file"></dd>
       </dl>

@@ -15,8 +15,10 @@ private static final long serialVersionUID = 1L;
   {
 	String view = "/WEB-INF/view/goodmorning.jsp";
 	request.setAttribute("morning", "GoodMorning");
-	int num = Integer.parseInt(request.getParameter("num2"));
-	request.setAttribute("number",num*10);
+//	int num = Integer.parseInt(request.getParameter("num"));
+	String num = request.getParameter("num");
+//	request.setAttribute("number",num*10);
+	request.setAttribute("number",num);
 	RequestDispatcher dispatcher = request.getRequestDispatcher(view);	
 	dispatcher.forward(request, response);
   }

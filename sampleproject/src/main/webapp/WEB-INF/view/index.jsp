@@ -10,7 +10,7 @@
 	<h1><%= request.getAttribute("hello") %></h1>
 	<a href="http://localhost:8080/sampleproject/servlet/morning">リンク</a>
 	<form method="get" name=form1 action="morning">
-		<input type="text" name="num2"> <input type="submit"value="送信">
+		<input type="text" name="num"> <input type="submit"value="送信">
 	</form>
 </body>
 </html>
