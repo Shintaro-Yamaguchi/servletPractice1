@@ -22,30 +22,40 @@ private static final long serialVersionUID = 1L;
 	request.setAttribute("morning", "GoodMorning");
 //	int num = Integer.parseInt(request.getParameter("num"));
 	String num = request.getParameter("num");
-	String msg="";
-	try {
-	      Class.forName("com.mysql.jdbc.Driver").newInstance();
-	      msg = "ドライバのロードに成功しました";
-	    }catch (ClassNotFoundException e){
-	      msg = "ドライバのロードに失敗しました";
-	    }catch (Exception e){
-	      msg = "ドライバのロードに失敗しました";
-	    }
-	System.out.println(msg);
-	try {
-		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/itemdb","root","YamaShin5032");
-		String sql = "select itemid, item_name, price from item";
-		PreparedStatement st = con.prepareStatement(sql);
-		ResultSet rs = st.executeQuery();
+//	String msg="";
+//	try {
+//	      Class.forName("com.mysql.jdbc.Driver").newInstance();
+//	      msg = "ドライバのロードに成功しました";
+//	    }catch (ClassNotFoundException e){
+//	      msg = "クラスが見つかりません";
+//	    }catch (Exception e){
+//	      msg = "ドライバのロードに失敗しました";
+//		}catch (UnsupportedClassVersionError e){
+//		  msg = "例外が投げられました";
+//		}
+//	System.out.println(msg);
+	
+	Connection con = null;
+	PreparedStatement st = null;
+	ResultSet rs = null;
+	String sql = "select * from item";
+	try { 
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		con = DriverManager.getConnection("jdbc:mysql://localhost:3306/itemdb", "root", "YamaShin5032");
+		st = con.prepareStatement(sql);
+		rs = st.executeQuery();
 		while (rs.next()) {
-			System.out.println(rs.getInt("itemid"));
+			System.out.println(rs.getString("item_name"));
 		}
-		st.close();
-		con.close();
-	} catch (SQLException e) {
+//		st.close();
+//		con.close();
+	}  catch (SQLException e) {
 		// TODO 自動生成された catch ブロック
 		e.printStackTrace();
-	}
+	}  catch (ClassNotFoundException e) {
+		 // TODO 自動生成された catch ブロック
+		System.out.println("ダメでした。");
+	} 
 //	request.setAttribute("number",num*10);
 	request.setAttribute("number",num);
 	RequestDispatcher dispatcher = request.getRequestDispatcher(view);	
