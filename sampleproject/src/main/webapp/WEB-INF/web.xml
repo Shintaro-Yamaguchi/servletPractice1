@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
-  http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
-  version="4.0"
-  metadata-complete="true">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" metadata-complete="true" version="4.0">
   <servlet>
     <servlet-name>hello</servlet-name>
     <servlet-class>sampleproject.HelloWorld</servlet-class>
@@ -25,46 +20,46 @@
     <servlet-name>contact</servlet-name>
     <servlet-class>sampleproject.Contact</servlet-class>
   </servlet>
-
+  <servlet>
+    <servlet-name>getcontact</servlet-name>
+    <servlet-class>sampleproject.Get_contact</servlet-class>
+  </servlet>
+  
   <servlet-mapping>
-    <servlet-name>
-      hello
-    </servlet-name>
+    <servlet-name>hello</servlet-name>
     <url-pattern>
       /servlet/hello
     </url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-    <servlet-name>
-      morning
-    </servlet-name>
+    <servlet-name>morning</servlet-name>
     <url-pattern>
       /servlet/morning
     </url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-    <servlet-name>
-      toppage
-    </servlet-name>
+    <servlet-name>toppage</servlet-name>
     <url-pattern>
       /servlet/toppage
     </url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-    <servlet-name>
-      introduction
-    </servlet-name>
+    <servlet-name>introduction</servlet-name>
     <url-pattern>
       /servlet/introduction
     </url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-    <servlet-name>
-      contact
-    </servlet-name>
+    <servlet-name>contact</servlet-name>
     <url-pattern>
       /servlet/contact
     </url-pattern>
   </servlet-mapping>
-
+  <servlet-mapping>
+    <servlet-name>getcontact</servlet-name>
+    <url-pattern>
+      /servlet/getcontact
+    </url-pattern>
+  </servlet-mapping>
+  
 </web-app>

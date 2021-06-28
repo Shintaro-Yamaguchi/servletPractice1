@@ -23,7 +23,7 @@
       </ul>
     </nav>
 
-    <form name="contact-form" method="post" action="contact" class="contact-form">
+    <form name="contact-form" method="post" action="getcontact" class="contact-form">
       <dl>
         <dt>名前</dt>
         <dd><input type="text" name="username"></dd>
