@@ -21,8 +21,8 @@ private static final long serialVersionUID = 1L;
   {
 	String view = "/WEB-INF/view/get_contact.jsp";
 	RequestDispatcher dispatcher = request.getRequestDispatcher(view);	
-	System.out.println(view);
-	dispatcher.forward(request, response);
+//	System.out.println(view);
+	
 	
 	List<Integer> idlist = new ArrayList<>();
 	List<String> usernamelist = new ArrayList<>();
@@ -49,11 +49,17 @@ private static final long serialVersionUID = 1L;
 	//		request.setAttribute("file", filelist);
 			
 		}
+		
+		st.close();
+		con.close();
+		
 	} catch (Exception e) {
 		// 接続・SQL文エラー
 		e.printStackTrace();
 		
 	}
+	
+	dispatcher.forward(request, response);
 	
   }
   
@@ -98,7 +104,7 @@ private static final long serialVersionUID = 1L;
 		
 	} // try
 	
-	System.out.println("text");
+//	System.out.println("text");
 	doGet(request, response);
   }
 }

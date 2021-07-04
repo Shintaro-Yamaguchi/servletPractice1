@@ -8,30 +8,57 @@
     <meta charset="utf-8">
     <title>データベース取得内容</title>
     <meta name="description" content="データベース取得内容">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/get_contact.css">
   </head>
 <body>
 	<h1>Hello</h1>
     
-    <% ArrayList<Integer> id = (ArrayList<Integer>) request.getAttribute("id"); %>
-	<% for(int i=0; i<id.size(); i++){ %>
-          <%= id.get(i) %><br/>
-    <% } %>
-    
-	<% ArrayList<String> username = (ArrayList<String>) request.getAttribute("username"); %>
-	<% for(int i=0; i<username.size(); i++){ %>
-          <%= username.get(i) %><br/>
-    <% } %>
-    
-	<% ArrayList<Integer> gender = (ArrayList<Integer>) request.getAttribute("gender"); %>
-	<% for(int i=0; i<gender.size(); i++){ %>
-          <%= gender.get(i) %><br/>
-    <% } %>
-    
-	<% ArrayList<String> message = (ArrayList<String>) request.getAttribute("message"); %>
-	<% for(int i=0; i<message.size(); i++){ %>
-          <%= message.get(i) %><br/>
-    <% } %>
-    
+    <table>
+	    <tr>
+	    	<th>No.</th>
+	    	<th>名前</th>
+	    	<th>性別</th>
+	    	<th>問合内容</th>
+	    	<th>更新</th>
+	    	<th>削除</th>
+	    </tr>
+	    <% ArrayList<Integer> id = (ArrayList<Integer>) request.getAttribute("id"); %>
+		<% ArrayList<String> username = (ArrayList<String>) request.getAttribute("username"); %>
+		<% ArrayList<Integer> gender = (ArrayList<Integer>) request.getAttribute("gender"); %>
+		<% ArrayList<String> message = (ArrayList<String>) request.getAttribute("message"); %>
+		<% for(int i=0; i<id.size(); i++){ %>
+			<% out.println("<tr>"); %>
+			<% out.println("<td>"); %>
+	          <%= id.get(i) %>
+			<% out.println("</td>"); %>
+			
+			<% out.println("<td>"); %>
+	          <%= username.get(i) %>
+	        <% out.println("</td>"); %>
+	        
+	        <% out.println("<td>"); %>
+	          <%= gender.get(i) %>
+	        <% out.println("</td>"); %>
+	        
+	        <% out.println("<td>"); %>
+	          <%= message.get(i) %>
+	        <% out.println("</td>"); %>
+	        
+	        <% out.println("<td>"); %>
+	        <% out.println("<button type=button onclick=location.href=http://localhost:8080/sampleproject/servlet/contact>更新"); %>
+	        <% out.println("</button>"); %>
+	        <% out.println("</td>"); %>
+	        
+	        <% out.println("<td>"); %>
+	        <% out.println("<button type=reset name=name value=#"); %>
+	        <% out.println("</button>"); %>
+	        <% out.println("</td>"); %>
+	        
+			<% out.println("</tr>"); %>
+			
+			
+	    <% } %>
+    </table>
 	
 </body>
 </html>
