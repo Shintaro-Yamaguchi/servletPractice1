@@ -24,6 +24,10 @@
     <servlet-name>getcontact</servlet-name>
     <servlet-class>sampleproject.Get_contact</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>update</servlet-name>
+    <servlet-class>sampleproject.Update</servlet-class>
+  </servlet>
   
   <servlet-mapping>
     <servlet-name>hello</servlet-name>
@@ -61,5 +65,10 @@
       /servlet/getcontact
     </url-pattern>
   </servlet-mapping>
-  
+  <servlet-mapping>
+    <servlet-name>update</servlet-name>
+    <url-pattern>
+      /servlet/update
+    </url-pattern>
+  </servlet-mapping>
 </web-app>

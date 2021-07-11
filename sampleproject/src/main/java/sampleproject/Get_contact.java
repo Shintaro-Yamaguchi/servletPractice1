@@ -23,7 +23,6 @@ private static final long serialVersionUID = 1L;
 	RequestDispatcher dispatcher = request.getRequestDispatcher(view);	
 //	System.out.println(view);
 	
-	
 	List<Integer> idlist = new ArrayList<>();
 	List<String> usernamelist = new ArrayList<>();
 	List<Integer> genderlist = new ArrayList<>();

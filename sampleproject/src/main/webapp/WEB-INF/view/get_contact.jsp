@@ -45,12 +45,17 @@
 	        <% out.println("</td>"); %>
 	        
 	        <% out.println("<td>"); %>
-	        <% out.println("<button type=button onclick=location.href=http://localhost:8080/sampleproject/servlet/contact>更新"); %>
-	        <% out.println("</button>"); %>
+	        <% out.println("<form name=update method=post action=update class=update>"); %>
+	        <% out.println("<input type=hidden name=id value="+id.get(i)+">"); %>
+	        <% out.println("<input type=hidden name=username value="+username.get(i)+">"); %>
+	        <% out.println("<input type=hidden name=gender value="+gender.get(i)+">"); %>
+	        <% out.println("<input type=hidden name=message value="+message.get(i)+">"); %>
+	        <% out.println("<input type=submit value=更新>"); %>
+	        <% out.println("</form>"); %>
 	        <% out.println("</td>"); %>
 	        
 	        <% out.println("<td>"); %>
-	        <% out.println("<button type=reset name=name value=#"); %>
+	        <% out.println("<button type=reset name=name value=#>削除"); %>
 	        <% out.println("</button>"); %>
 	        <% out.println("</td>"); %>
 	        
