@@ -28,6 +28,10 @@
     <servlet-name>update</servlet-name>
     <servlet-class>sampleproject.Update</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>updatecontact</servlet-name>
+    <servlet-class>sampleproject.Update_contact</servlet-class>
+  </servlet>
   
   <servlet-mapping>
     <servlet-name>hello</servlet-name>
@@ -69,6 +73,12 @@
     <servlet-name>update</servlet-name>
     <url-pattern>
       /servlet/update
+    </url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>updatecontact</servlet-name>
+    <url-pattern>
+      /servlet/updatecontact
     </url-pattern>
   </servlet-mapping>
 </web-app>

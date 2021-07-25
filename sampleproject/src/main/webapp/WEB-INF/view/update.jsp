@@ -19,7 +19,7 @@
 	<%= request.getAttribute("gender") %>
 	<%= request.getAttribute("message") %>
 	
-	<form name="contact-form" method="post" action="getcontact" class="contact-form">
+	<form name="contact-form" method="post" action="updatecontact" class="contact-form">
       <dl>
       	<dt>登録No. <%= request.getAttribute("id") %></dt><br>
         <dt>名前</dt>
@@ -35,7 +35,7 @@
         <dd><input type="file" name="file" class="file"></dd>
       </dl>
       <div>
-        <input type="submit" value="送信" class="send">
+        <input type="submit" value="更新" class="send">
       </div>
     </form>
 	
