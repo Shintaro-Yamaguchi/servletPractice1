@@ -32,6 +32,14 @@
     <servlet-name>updatecontact</servlet-name>
     <servlet-class>sampleproject.Update_contact</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>delete</servlet-name>
+    <servlet-class>sampleproject.Delete</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>deletecontact</servlet-name>
+    <servlet-class>sampleproject.Delete_contact</servlet-class>
+  </servlet>
   
   <servlet-mapping>
     <servlet-name>hello</servlet-name>
@@ -79,6 +87,18 @@
     <servlet-name>updatecontact</servlet-name>
     <url-pattern>
       /servlet/updatecontact
+    </url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>delete</servlet-name>
+    <url-pattern>
+      /servlet/delete
+    </url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>deletecontact</servlet-name>
+    <url-pattern>
+      /servlet/deletecontact
     </url-pattern>
   </servlet-mapping>
 </web-app>

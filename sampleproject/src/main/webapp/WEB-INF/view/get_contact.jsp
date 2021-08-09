@@ -55,8 +55,13 @@
 	        <% out.println("</td>"); %>
 	        
 	        <% out.println("<td>"); %>
-	        <% out.println("<button type=reset name=name value=#>削除"); %>
-	        <% out.println("</button>"); %>
+	        <% out.println("<form name=delete method=post action=delete class=delete>"); %>
+	        <% out.println("<input type=hidden name=id value="+id.get(i)+">"); %>
+	        <% out.println("<input type=hidden name=username value="+username.get(i)+">"); %>
+	        <% out.println("<input type=hidden name=gender value="+gender.get(i)+">"); %>
+	        <% out.println("<input type=hidden name=message value="+message.get(i)+">"); %>
+	        <% out.println("<input type=submit value=削除>"); %>
+	        <% out.println("</form>"); %>
 	        <% out.println("</td>"); %>
 	        
 			<% out.println("</tr>"); %>

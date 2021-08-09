@@ -13,13 +13,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class Update_contact extends HttpServlet {
+public class Delete_contact extends HttpServlet {
 private static final long serialVersionUID = 1L;
 
   public void doGet(HttpServletRequest request, HttpServletResponse response)
   throws IOException, ServletException
   {
-	String view = "/WEB-INF/view/updatecontact.jsp";
+	String view = "/WEB-INF/view/deletecontact.jsp";
 	RequestDispatcher dispatcher = request.getRequestDispatcher(view);	
 //	System.out.println(view);
 	
@@ -82,18 +82,14 @@ private static final long serialVersionUID = 1L;
 	String value4 = request.getParameter("file");
 	System.out.println(value4);
 	
-	String sql = "update contact set username = ?, gender = ?, message  =?, file = ? where id = ?";
+	String sql = "delete from contact where id = ?";
 	
 	try {
 		// コネクション取得
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/itemdb","root","YamaShin5032");
 		PreparedStatement st = con.prepareStatement(sql);		
-		st.setString(1,value);
-		st.setString(2,value2);
-		st.setString(3,value3);
-		st.setString(4,value4);
-		st.setString(5,value0);
+		st.setString(1,value0);
 		
 		// SQL文送信	
 		int num = st.executeUpdate();

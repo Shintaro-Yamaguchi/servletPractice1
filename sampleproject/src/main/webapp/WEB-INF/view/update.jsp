@@ -21,7 +21,8 @@
 	
 	<form name="contact-form" method="post" action="updatecontact" class="contact-form">
       <dl>
-      	<dt>登録No. <%= request.getAttribute("id") %></dt><br>
+      	<dt>登録No.</dt>
+      	<dd><input type="text" name="id" value="<%= request.getAttribute("id") %>" readonly></dd>
         <dt>名前</dt>
         <dd><input type="text" name="username" value="<%= request.getAttribute("username") %>"></dd>
         <dt>性別</dt>
