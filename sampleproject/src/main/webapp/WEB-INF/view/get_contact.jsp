@@ -37,7 +37,13 @@
 	        <% out.println("</td>"); %>
 	        
 	        <% out.println("<td>"); %>
-	          <%= gender.get(i) %>
+	          <% 
+	          	if (gender.get(i) == 0) {
+	        	  	out.println("男性");
+	          	} else if (gender.get(i) == 1) {
+	          		out.println("女性");
+	          	}
+	          %>
 	        <% out.println("</td>"); %>
 	        
 	        <% out.println("<td>"); %>

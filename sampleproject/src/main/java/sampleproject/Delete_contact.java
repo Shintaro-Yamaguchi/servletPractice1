@@ -82,7 +82,7 @@ private static final long serialVersionUID = 1L;
 	String value4 = request.getParameter("file");
 	System.out.println(value4);
 	
-	String sql = "delete from contact where id = ?";
+	String sql = "update contact set delete_flag = 1 where id = ?";
 	
 	try {
 		// コネクション取得

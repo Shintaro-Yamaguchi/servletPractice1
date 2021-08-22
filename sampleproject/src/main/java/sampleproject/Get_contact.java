@@ -27,7 +27,7 @@ private static final long serialVersionUID = 1L;
 	List<String> usernamelist = new ArrayList<>();
 	List<Integer> genderlist = new ArrayList<>();
 	List<String> messagelist = new ArrayList<>();
-	String sql = "select * from contact";
+	String sql = "select * from contact where delete_flag = 0";
 	
 	try {
 		Class.forName("com.mysql.cj.jdbc.Driver");
