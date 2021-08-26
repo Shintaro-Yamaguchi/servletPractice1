@@ -14,7 +14,7 @@
 <body>
 	<h1>データ削除</h1>
 	
-	<h2>以下のデータを削除しますか。</h2>
+	<h2>こちらのデータを削除しますか。</h2>
 	
 	<form name="contact-form" method="post" action="deletecontact" class="contact-form">
       <dl>
